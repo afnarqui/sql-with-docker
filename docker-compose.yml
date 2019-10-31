@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+ 
+  bd:
+    build:
+      context: ./bd
+    ports:
+      - "1433:1433" 
+    restart: always        
+    networks:
+      - net
+
+networks:
+  net:
